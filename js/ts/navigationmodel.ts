@@ -86,7 +86,7 @@ module MDwiki.DataModels {
         var navbar = new NavigationBarModel();
         var t1 = new ToplevelEntry();
         t1.title = "About";
-        t1.href = "index.md";
+        t1.href = "home";
         var t2 = new ToplevelEntry();
         t2.title = "Docs";
         t2.href = "";

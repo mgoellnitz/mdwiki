@@ -339,7 +339,7 @@ module MDwiki.Legacy {
             var filename = window.location.hash;
 
             if (filename.length === 0) {
-                filename = '#!index.md';
+                filename = '#!home';
             }
             var selector = 'li:has(a[href="' + filename + '"])';
             $('#md-menu').find (selector).addClass ('active');

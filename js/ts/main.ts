@@ -44,9 +44,9 @@ declare var MDwikiEnableDebug: any;
                 var ex_pos = href.indexOf('#');
                 if (ex_pos !== -1) {
                     $.md.inPageAnchor = href.substring(ex_pos + 1);
-                    $.md.mainHref = href.substring(0, ex_pos);
+                    $.md.mainHref = href.substring(0, ex_pos)+".md";
                 } else {
-                    $.md.mainHref = href;
+                    $.md.mainHref = href+".md";
                 }
             }
 
@@ -57,12 +57,12 @@ declare var MDwikiEnableDebug: any;
                     currentHashString === '#'||
                     currentHashString === '#!')
                 {
-                    newHashString = '#!index.md';
+                    newHashString = '#!home';
                 }
                 else if (currentHashString.startsWith ('#!') &&
                          currentHashString.endsWith('/')
                         ) {
-                    newHashString = currentHashString + 'index.md';
+                    newHashString = currentHashString + 'home';
                 }
                 if (newHashString)
                     window.location.hash = newHashString;
