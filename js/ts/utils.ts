@@ -19,6 +19,8 @@ module MDwiki.Utils {
                 return false;
             if (path.startsWith('/'))
                 return false;
+            if (path.indexOf('.')<0)
+                return false;
             return true;
         }
 
